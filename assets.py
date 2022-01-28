@@ -11,14 +11,15 @@ import requests, json
 # #r = requests.get(url)
 #
 
-#   #####################
-# Collection 1
-# ########################
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Creature World x4</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/creatureworld" target="_blank">Creature World x4</a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/creatureworld/stats"
     r = requests.get(url)
     response = r.json()
@@ -26,12 +27,19 @@ with col1:
     st.write(f"24h Average price:", r.json()["stats"]["one_day_average_price"],f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
 #   #####################
-# Collection 2
+# Collection 1
 # ########################
+    st.write(f"------------------------------------------------------")
+
 with col2:
-    st.markdown("<h3 style='text-align: center; color: magenta;'>Crystals x6</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/fvck-crystal" target="_blank">Crystals x6</a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/fvck-crystal/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -39,13 +47,19 @@ with col2:
     st.write(f"24h Average price:", r.json()["stats"]["one_day_average_price"],f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
 #   #####################
-# Collection 3
+# Collection 2
 # ########################
+    st.write(f"------------------------------------------------------")
 
 with col3:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Moons of Mars x22</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/thefatedrenegades" target="_blank">Moons of Mars x22</a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/thefatedrenegades/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -53,12 +67,19 @@ with col3:
     st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
 #   #####################
-# Collection 4
+# Collection 3
 # ########################
+    st.write(f"------------------------------------------------------")
+
 with col1:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Fang Gang x4</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/fanggangnft" target="_blank">Fang Gang x4</a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/fanggangnft/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -66,26 +87,40 @@ with col1:
     st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
+
+#   #####################
+# Collection 4
+# ########################
+    st.write(f"------------------------------------------------------")
+
+with col2:
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/mev-army" target="_blank">MEV army</a>
+        """,
+        unsafe_allow_html=True,
+    )
+    url = "https://api.opensea.io/api/v1/collection/mev-army/stats"
+    r = requests.get(url)
+    response_cw = r.json()
+    st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
+    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
 #   #####################
 # Collection 5
 # ########################
-with col2:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Merge x 134</h3>", unsafe_allow_html=True)
-    url = "https://api.opensea.io/api/v1/collection/m/stats"
-    r = requests.get(url)
-    response_cw = r.json()
-    st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:   \n", r.json()["stats"]["one_day_average_price"], f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"------------------------------------------------------")
 
-#   #####################
-# Collection 6
-# ########################
 with col3:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Mad Rabbits x11 </h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/madrabbitsriotclub" target="_blank">Mad Rabbits x11 </a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/madrabbitsriotclub/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -93,13 +128,79 @@ with col3:
     st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+
+    #   #####################
+    # Collection 6
+    # ########################
+    st.write(f"------------------------------------------------------")
+
+with col1:
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/m" target="_blank">Merge</a>
+        """,
+        unsafe_allow_html=True,
+    )
+    url = "https://api.opensea.io/api/v1/collection/m/stats"
+    r = requests.get(url)
+    response_cw = r.json()
+    st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
+    st.write(f"24h avg price:   \n", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
     #   #####################
     # Collection 7
     # ########################
+    st.write(f"------------------------------------------------------")
+
+with col2:
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/lostpoets" target="_blank">Pak - Pages/Poets</a>
+        """,
+        unsafe_allow_html=True,
+    )
+    url = "https://api.opensea.io/api/v1/collection/lostpoets/stats"
+    r = requests.get(url)
+    response_cw = r.json()
+    st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
+    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+
+    #   #####################
+    # Collection 8
+    # ########################
+    st.write(f"------------------------------------------------------")
+
+with col3:
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/Fomoverse" target="_blank">Fomoverse</a>
+        """,
+        unsafe_allow_html=True,
+    )
+    url = "https://api.opensea.io/api/v1/collection/fomoverse/stats"
+    r = requests.get(url)
+    response_cw = r.json()
+    st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
+    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
+    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+
+    # ########################
+    # Collection 9
+    # ########################
+    st.write(f"------------------------------------------------------")
 
 with col1:
-    st.markdown("<h3 style='text-align: center; color: blue;'>SuperlativeSS x3 </h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/superlativesecretsociety" target="_blank">SuperlativeSS x3 </a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/superlativesecretsociety/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -107,12 +208,16 @@ with col1:
     st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-
-    #   #####################
-    # Collection 8
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    # ########################
+    # Collection 10
     # ########################
 with col2:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Graycraft2 x3</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/graycraft-2" target="_blank">Graycraft2 x3 </a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/graycraft-2/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -120,12 +225,17 @@ with col2:
     st.write(f"24h avg price:   \n", r.json()["stats"]["one_day_average_price"], f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    #   #####################
-    # Collection 9
-    # ########################
-
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+#
+    #     #   #####################
+    #     # Collection 11
+    #     # ########################
 with col3:
-    st.markdown("<h3 style='text-align: center; color: blue;'>Hidden in Noise x3</h3>", unsafe_allow_html=True)
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/hiddeninnoise" target="_blank">Hidden in Noise x3</a>
+        """,
+        unsafe_allow_html=True,
+    )
     url = "https://api.opensea.io/api/v1/collection/hiddeninnoise/stats"
     r = requests.get(url)
     response_cw = r.json()
@@ -133,15 +243,8 @@ with col3:
     st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
-# with col1:
-#
 #     #   #####################
-#     # Collection 10
+#     # Collection 12
 #     # ########################
-# with col2:
-#
-#     #   #####################
-#     # Collection 11
-#     # ########################
-# with col3:
