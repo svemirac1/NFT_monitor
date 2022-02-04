@@ -25,9 +25,9 @@ with col1:
     response = r.json()
     st.write(f"floor price:", response["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", response["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", response["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", response["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 #   #####################
 # Collection 1
@@ -45,9 +45,9 @@ with col2:
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 #   #####################
 # Collection 2
@@ -65,9 +65,9 @@ with col3:
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
     #   #####################
     # Collection 3
@@ -85,9 +85,9 @@ with col1:
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 
 #   #####################
@@ -106,9 +106,9 @@ with col2:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 #   #####################
 # Collection 5
@@ -126,9 +126,9 @@ with col3:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
     #   #####################
     # Collection 6
@@ -146,9 +146,9 @@ with col1:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
     #   #####################
     # Collection 7
@@ -166,9 +166,9 @@ with col2:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
     #   #####################
     # Collection 8
@@ -186,9 +186,9 @@ with col3:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
     # ########################
     # Collection 9
@@ -206,12 +206,16 @@ with col1:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
+
     # ########################
     # Collection 10
     # ########################
+
+    st.write(f"------------------------------------------------------")
+
 with col2:
     st.markdown(
         """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/graycraft-2" target="_blank">Graycraft2 x3 </a>
@@ -223,13 +227,15 @@ with col2:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 #
     #     #   #####################
     #     # Collection 11
     #     # ########################
+
+    st.write(f"------------------------------------------------------")
 with col3:
     st.markdown(
         """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/hiddeninnoise" target="_blank">Hidden in Noise x3</a>
@@ -241,13 +247,15 @@ with col3:
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 #     #   #####################
 #     # Collection 12
 #     # ########################
+
+    st.write(f"------------------------------------------------------")
 
 with col1:
     st.markdown(
@@ -259,10 +267,10 @@ with col1:
     r = requests.get(url)
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"24h avg price:", round(r.json()["stats"]["one_day_average_price"],3), f"ETH")
+    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
 
 #   #####################
 # Collection 3
