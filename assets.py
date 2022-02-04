@@ -23,11 +23,11 @@ with col1:
     url = "https://api.opensea.io/api/v1/collection/creatureworld/stats"
     r = requests.get(url)
     response = r.json()
-    st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
-    st.write(f"24h Average price:", r.json()["stats"]["one_day_average_price"],f"ETH")
-    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
-    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+    st.write(f"floor price:", response["stats"]["floor_price"],f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
+    st.write(f"24h sales:", response["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", response["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", response["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
 #   #####################
 # Collection 1
@@ -44,7 +44,7 @@ with col2:
     r = requests.get(url)
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
-    st.write(f"24h Average price:", r.json()["stats"]["one_day_average_price"],f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -56,22 +56,22 @@ with col2:
 
 with col3:
     st.markdown(
-        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/thefatedrenegades" target="_blank">Moons of Mars x22</a>
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/azuki" target="_blank">Azuki</a>
         """,
         unsafe_allow_html=True,
     )
-    url = "https://api.opensea.io/api/v1/collection/thefatedrenegades/stats"
+    url = "https://api.opensea.io/api/v1/collection/azuki/stats"
     r = requests.get(url)
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
 
-#   #####################
-# Collection 3
-# ########################
+    #   #####################
+    # Collection 3
+    # ########################
     st.write(f"------------------------------------------------------")
 
 with col1:
@@ -84,7 +84,7 @@ with col1:
     r = requests.get(url)
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -103,9 +103,9 @@ with col2:
     )
     url = "https://api.opensea.io/api/v1/collection/mev-army/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -123,9 +123,9 @@ with col3:
     )
     url = "https://api.opensea.io/api/v1/collection/madrabbitsriotclub/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -143,9 +143,9 @@ with col1:
     )
     url = "https://api.opensea.io/api/v1/collection/m/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:   \n", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -163,9 +163,9 @@ with col2:
     )
     url = "https://api.opensea.io/api/v1/collection/lostpoets/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -183,9 +183,9 @@ with col3:
     )
     url = "https://api.opensea.io/api/v1/collection/fomoverse/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -203,9 +203,9 @@ with col1:
     )
     url = "https://api.opensea.io/api/v1/collection/superlativesecretsociety/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -220,9 +220,9 @@ with col2:
     )
     url = "https://api.opensea.io/api/v1/collection/graycraft-2/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h avg price:   \n", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -238,9 +238,9 @@ with col3:
     )
     url = "https://api.opensea.io/api/v1/collection/hiddeninnoise/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
-    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"],f"ETH")
+    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
     st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
     st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
@@ -248,3 +248,22 @@ with col3:
 #     #   #####################
 #     # Collection 12
 #     # ########################
+
+with col1:
+    st.markdown(
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/thefatedrenegades" target="_blank">Moons of Mars x22</a>
+        """,
+        unsafe_allow_html=True,
+    )
+    url = "https://api.opensea.io/api/v1/collection/thefatedrenegades/stats"
+    r = requests.get(url)
+    response_cw = r.json()
+    st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
+    st.write(f"24h avg price:", r.json()["stats"]["one_day_average_price"], f"ETH")
+    st.write(f"24h sales:", r.json()["stats"]["one_day_sales"])
+    st.write(f"Sales in last 7 days", r.json()["stats"]["seven_day_sales"])
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", r.json()["stats"]["count"])
+
+#   #####################
+# Collection 3
+# ########################
