@@ -42,7 +42,7 @@ with col2:
     )
     url = "https://api.opensea.io/api/v1/collection/fvck-crystal/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
@@ -64,10 +64,10 @@ with col3:
     r = requests.get(url)
     response_cw = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
-    st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
-    st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
-    st.write(f"Sales in last 7 days", round(response["stats"]["seven_day_sales"]))
-    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response["stats"]["count"]))
+    st.write(f"24h Average price:", round(response_cw["stats"]["one_day_average_price"],3),f"ETH")
+    st.write(f"24h sales:", round(response_cw["stats"]["one_day_sales"]))
+    st.write(f"Sales in last 7 days", round(response_cw["stats"]["seven_day_sales"]))
+    st.write(f"Unique owners:", r.json()["stats"]["num_owners"], f"/", round(response_cw["stats"]["count"]))
 
     #   #####################
     # Collection 3
@@ -82,7 +82,7 @@ with col1:
     )
     url = "https://api.opensea.io/api/v1/collection/fanggangnft/stats"
     r = requests.get(url)
-    response_cw = r.json()
+    response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"],f"ETH")
     st.write(f"24h Average price:", round(response["stats"]["one_day_average_price"],3),f"ETH")
     st.write(f"24h sales:", round(response["stats"]["one_day_sales"]))
