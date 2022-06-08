@@ -31,11 +31,11 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown(
-        """<a style='display: block; text-align: center; font-size: 42px' href="https://opensea.io/collection/old-ape-country-club-official" target="_blank">OACC</a>
+        """<a style='display: block; text-align: center; font-size: 42px' href="https://opensea.io/collection/vividlimited" target="_blank">Vivid</a>
         """,
         unsafe_allow_html=True,
     )
-    url = "https://api.opensea.io/api/v1/collection/old-ape-country-club-official/stats"
+    url = "https://api.opensea.io/api/v1/collection/vividlimited/stats"
     r = requests.get(url)
     response = r.json()
     st.write(f"------------------------------------------------------")
