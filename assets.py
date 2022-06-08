@@ -79,11 +79,11 @@ with col3:
 
 with col1:
     st.markdown(
-        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/cryptoadz-by-gremplin" target="_blank">Cryptoadz</a>
+        """<a style='display: block; text-align: center; font-size: 28px' href="https://opensea.io/collection/vividlimited" target="_blank">Vivid</a>
         """,
         unsafe_allow_html=True,
     )
-    url = "https://api.opensea.io/api/v1/collection/cryptoadz-by-gremplin/stats"
+    url = "https://api.opensea.io/api/v1/collection/vividlimited/stats"
     r = requests.get(url)
     response = r.json()
     st.write(f"floor price:", r.json()["stats"]["floor_price"], f"ETH")
